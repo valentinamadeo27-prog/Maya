@@ -1,0 +1,128 @@
+/* Configuración General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #222; /* Fondo oscuro para que resalte el menú */
+    font-family: 'Courier New', Courier, monospace; /* Estilo base pixel */
+}
+
+/* Barra de Navegación */
+.navbar {
+    background-color: #FFD700; /* Amarillo principal */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 4px solid #5D4037; /* Detalle Café */
+    position: relative;
+    height: 80px;
+}
+
+/* Efecto Tambaleo Logo (Wobble) */
+.logo-pixel {
+    height: 175px;
+    image-rendering: pixelated;
+    animation: wobble 2s infinite ease-in-out;
+}
+
+@keyframes wobble {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+}
+
+/* Enlaces del Menú */
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+    opacity: 0;
+    animation: fadeInDown 0.5s ease forwards;
+    animation-delay: calc(var(--i) * 0.1s); /* Animación de entrada escalonada */
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+/* Colores Específicos */
+.link-verde { color: #614022; }
+.link-cafe { color: #614022; }
+.link-rojo { color: #614022; }
+
+.nav-links a:hover {
+    background: #000;
+    color: #FFD700;
+    border: 2px solid #5D4037;
+}
+
+/* Animación de Entrada */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividad (Mobile) */
+.menu-toggle {
+    display: none;
+}
+
+.menu-button {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-button span {
+    width: 25px;
+    height: 3px;
+    background: #5D4037;
+    margin: 2px;
+}
+
+@media (max-width: 768px) {
+    .menu-button {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #FFD700;
+        flex-direction: column;
+        align-items: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+        border-bottom: 4px solid #5D4037;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        opacity: 1; /* En móvil las mostramos al abrir */
+    }
+
+    /* Mostrar menú al activar el checkbox */
+    .menu-toggle:checked ~ .nav-links {
+        max-height: 400px;
+    }
+}

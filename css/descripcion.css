@@ -1,0 +1,80 @@
+/* Configuración de la Sección */
+.pixel-section {
+    display: flex;
+    flex-wrap: wrap; /* Permite que sea responsivo */
+    background-color: #FFD700; /* Amarillo */
+    padding: 40px;
+    gap: 20px;
+    align-items: center;
+    border-bottom: 6px solid #5D4037; /* Detalle Café */
+}
+
+.column {
+    flex: 1;
+    min-width: 300px; /* Tamaño mínimo antes de apilarse */
+}
+
+/* Estilo del Video */
+.video-frame {
+    border: 4px solid #5D4037; /* Borde Café */
+    box-shadow: 8px 8px 0px #C62828; /* Sombra sólida Roja */
+    line-height: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-frame video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Estilo del Texto */
+.text-col {
+    font-family: 'Pixelify Sans', sans-serif;
+    color: #5D4037; /* Café */
+    padding: 20px;
+}
+
+.text-col h2 {
+    font-size: 2.5rem;
+    color: #C62828; /* Rojo */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.text-col p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #533115; /* Verde para el cuerpo de texto */
+}
+
+/* Botón con estilo Pixel */
+.pixel-btn {
+    font-family: 'Pixelify Sans', sans-serif;
+    background-color: #2E7D32; /* Verde */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px #5D4037;
+    transition: transform 0.1s;
+}
+
+.pixel-btn:hover {
+    background-color: #C62828; /* Rojo al pasar el mouse */
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #5D4037;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    .pixel-section {
+        padding: 20px;
+    }
+    
+    .text-col {
+        text-align: center;
+    }
+}

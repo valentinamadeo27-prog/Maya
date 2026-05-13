@@ -1,0 +1,151 @@
+/* Contenedor Principal */
+.seccion-personajes {
+    background-color: #FFD700;
+    padding: 50px 20px;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 1.4vh;
+}
+
+.titulo-pixeleado {
+    text-align: center;
+    color: #C62828;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+/* Grilla 2x2 */
+.grilla-personajes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tarjeta Individual */
+.personaje-card {
+    display: flex;
+    background: #5D4037; /* Café */
+    color: white;
+    border: 4px solid #000;
+    cursor: pointer;
+    transition: transform 0.2s;
+    height: 150px;
+}
+
+.personaje-card:hover {
+    transform: scale(1.02);
+    border-color: #2E7D32; /* Verde */
+}
+
+.info-mini {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-mini h3 { color: #FFD700; }
+
+.img-mini {
+    width: 300px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 4px solid #000;
+}
+
+.img-mini img {
+    width: 80%;
+    image-rendering: pixelated;
+}
+
+/* Lógica del Modal (Sin JS) */
+.modal-state {
+    display: none; /* Escondemos el checkbox */
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    display: none; /* Escondido por defecto */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+/* Cuando el checkbox está activado, mostramos el modal */
+.modal-state:checked ~ .modal-overlay {
+    display: flex;
+}
+
+.modal-content {
+    background: #FFD700;
+    border: 8px solid #5D4037;
+    max-width: 700px;
+    width: 100%;
+    cursor: default;
+}
+
+.modal-grid {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.modal-grid img {
+    width: 100%;
+    background: #000;
+    border: 4px solid #C62828;
+    image-rendering: pixelated;
+    object-fit: contain;
+}
+
+.modal-text {
+    flex: 1;
+    padding-left: 20px;
+    min-width: 250px;
+}
+
+.modal-text h3 {
+    color: #C62828;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.modal-text p {
+    color: #5D4037;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.modal-text span {
+    display: block;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #2E7D32;
+    text-decoration: underline;
+}
+
+/* Ajuste Responsivo Móvil */
+@media (max-width: 768px) {
+    .grilla-personajes {
+        grid-template-columns: 1fr;
+    }
+    .modal-grid img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .modal-text {
+        padding-left: 0;
+    }
+}

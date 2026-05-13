@@ -1,0 +1,62 @@
+/* Contenedor Principal */
+.slider-container {
+    width: 100%;
+    height: 60vh; /* Altura controlada, no muy alto */
+    overflow: hidden;
+    position: relative;
+    background-color: #000;
+    border-bottom: 6px solid #5D4037; /* Detalle café acorde al menú */
+}
+
+.slider-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: pixelFade 25s infinite; /* 5s por imagen */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    image-rendering: pixelated; /* Mantiene el estilo pixel art */
+}
+
+/* Tiempos de animación para las 5 imágenes */
+.s1 { animation-delay: 0s; }
+.s2 { animation-delay: 5s; }
+.s3 { animation-delay: 10s; }
+.s4 { animation-delay: 15s; }
+.s5 { animation-delay: 20s; }
+
+/* Animación de Desvanecimiento */
+@keyframes pixelFade {
+    0% { opacity: 0; }
+    5% { opacity: 1; }
+    20% { opacity: 1; }
+    25% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* Textura de rejilla para simular pantalla retro (opcional) */
+.pixel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+    background-size: 100% 3px, 3px 100%;
+    pointer-events: none; /* Permite clicks a través de la capa */
+    z-index: 10;
+}

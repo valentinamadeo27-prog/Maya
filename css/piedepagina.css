@@ -1,0 +1,106 @@
+/* Configuración del Footer */
+.pixel-footer {
+    background-color: #864f2a; /* Amarillo */
+    border-top: 8px solid #5D4037; /* Borde Café grueso */
+    font-family: 'Pixelify Sans', sans-serif;
+    padding: 40px 0 0 0;
+    color: #5D4037;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 20px 40px 20px;
+}
+
+/* Títulos con efecto de bloque */
+.footer-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 2px 8px;
+    border: 3px solid #000;
+    box-shadow: 4px 4px 0px #000;
+    background: #fff;
+}
+
+.title-rojo { color: #C62828; }
+.title-verde { color: #2E7D32; }
+.title-cafe { color: #5D4037; }
+
+/* Enlaces y Texto */
+.pixel-text {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #2E7D32;
+    transition: all 0.2s;
+}
+
+.footer-links a:hover {
+    color: #C62828;
+    padding-left: 10px; /* Efecto de empuje */
+}
+
+/* Iconos de Redes Sociales (Estilo Botón) */
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background-color: #5D4037;
+    color: #FFD700;
+    text-decoration: none;
+    border: 3px solid #000;
+    font-weight: bold;
+    box-shadow: 4px 4px 0px #C62828;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.social-box:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px #000;
+    background-color: #C62828;
+}
+
+/* Barra Final */
+.footer-bottom {
+    background-color: #000;
+    color: #FFD700;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .footer-section {
+        text-align: center;
+    }
+    .social-icons {
+        justify-content: center;
+    }
+}
