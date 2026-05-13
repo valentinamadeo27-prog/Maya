@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/descripcion.css">
+    <link rel="stylesheet" href="css/hr.css">
+    <link rel="stylesheet" href="css/personajes.css">
+    <link rel="stylesheet" href="css/piedepagina.css">
+    <title>MAYA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+   <section class="slider-container">
+    <div class="slider-wrapper">
+        <div class="slide s5">
+            <img src="imagenes/Diseño sin título (3).png" alt="Slide 5">
+        </div>
+        <div class="slide s4">
+            <img src="imagenes/Diseño sin título (6).png" alt="Slide 4">
+        </div>
+        <div class="slide s3">
+            <img src="imagenes/Diseño sin título (2).png" alt="Slide 3">
+        </div>
+        <div class="slide s2">
+            <img src="imagenes/Diseño sin título (7).png" alt="Slide 2">
+        </div>
+        <div class="slide s1">
+            <img src="imagenes/Gemini_Generated_Image_98if7h98if7h98if.png" alt="Slide 1">
+        </div>
+    </div>
+    
+    <div class="pixel-overlay"></div>
+</section>
+
+
+
+<nav class="navbar">
+    <!-- Logo con efecto tambaleo -->
+    <div class="logo-container">
+        <img src="imagenes/ChatGPT Image 11 may 2026, 19_25_37.png" alt="Logo" class="logo-pixel">
+    </div>
+
+    <!-- Botón de menú para móvil -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-button">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <!-- Enlaces del menú -->
+    <ul class="nav-links">
+        <li style="--i:1"><a href="#inicio" class="link-verde">INICIO</a></li>
+        <li style="--i:2"><a href="#descripcion" class="link-cafe">DESCRIPCIÓN</a></li>
+        <li style="--i:3"><a href="#personajes" class="link-rojo">PERSONAJES</a></li>
+        <li style="--i:4"><a href="#contacto" class="link-verde">CONTACTO</a></li>
+    </ul>
+</nav>
+<section class="pixel-section">
+    <!-- Columna Izquierda: Video -->
+    <div class="column video-col">
+        <div class="video-frame">
+            <video autoplay muted loop playsinline>
+                <source src="videos/YTDown_YouTube_Nightwish-Wish-I-Had-An-Angel-OFFICIAL-V_Media_wEERFBI9eCg_001_720p.mp4" type="video/mp4">
+                Tu navegador no soporta videos.
+            </video>
+        </div>
+    </div>
+
+    <!-- Columna Derecha: Texto -->
+    <div class="column text-col">
+        <h2>Secretos Bajo la Arena</h2>
+        <p>
+           🌵✨ Adéntrate en un mundo inspirado en la grandeza de la cultura maya y los misteriosos desiertos ancestrales.
+Explora ruinas olvidadas, templos ocultos y paisajes llenos de secretos en una aventura estilo Pixel Art llena de magia, exploración y desafíos.
+
+Descubre reliquias antiguas, enfréntate a criaturas del desierto y revela los misterios de una civilización perdida mientras recorres escenarios con un estilo retro único y lleno de vida. 🏺☀️.
+        </p>
+        <p>
+            Características:
+• Estilo visual Pixel Art retro
+• Inspiración en la cultura maya
+• Desiertos, templos y ruinas antiguas
+• Exploración y aventura
+• Ambiente misterioso y mágico
+
+¿Estás listo para descubrir los secretos enterrados bajo la arena?
+        </p>
+        
+        
+    </div>
+
+</section>
+
+<section class="seccion-personajes">
+    <h2 class="titulo-pixeleado">PERSONAJES</h2>
+
+    <div class="grilla-personajes">
+        <!-- Personaje 1 -->
+        <div class="tarjeta-wrapper">
+            <input type="checkbox" id="modal-1" class="modal-state">
+            <label for="modal-1" class="personaje-card">
+                <div class="info-mini">
+                    <h3>GUERRERO</h3>
+                    <p>Habilidades:
+
+Un antiguo guerrero del desierto que protege los secretos de las ruinas perdidas. Usa un manto ceremonial y plumas sagradas que le permiten conectarse con la energía del sol.</p>
+                </div>
+                <div class="img-mini">
+                    <img src="imagenes/Diseño sin título (2).png" alt="P1">
+                </div>
+            </label>
+            <!-- Cuadro Modal -->
+            <div class="modal-overlay">
+                <label for="modal-1" class="modal-content">
+                    <div class="modal-grid">
+                        <img src="imagenes/Diseño sin título (2).png" alt="P1">
+                        <div class="modal-text">
+                            <h3>GUERRERO MAYA</h3>
+                            <p>Habilidades:
+
+☀️ Luz Solar: lanza ráfagas de energía dorada.
+🌪️ Paso del Viento: se mueve rápidamente entre las dunas.
+🛡️ Protección Ancestral: reduce el daño recibido durante unos segundos..</p>
+                            <span>(Click en cualquier parte para cerrar)</span>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <!-- Repetir estructura para Personaje 2, 3 y 4 cambiando IDs -->
+        <!-- Personaje 2 -->
+        <div class="tarjeta-wrapper">
+            <input type="checkbox" id="modal-2" class="modal-state">
+            <label for="modal-2" class="personaje-card">
+                <div class="info-mini">
+                    <h3>KIME</h3>
+                    <p>Un antiguo ser creado por una civilización olvidada para proteger templos y reliquias mayas. Sus ojos rojos detectan cualquier amenaza.</p>
+                </div>
+                <div class="img-mini"><img src="imagenes/Diseño sin título (3).png" alt="P2"></div>
+            </label>
+            <div class="modal-overlay">
+                <label for="modal-2" class="modal-content">
+                    <div class="modal-grid">
+                        <img src="imagenes/Diseño sin título (3).png" alt="P2">
+                        <div class="modal-text">
+                            <h3>KIME</h3>
+                            <p>Habilidades:
+
+🔴 Visión Escarlata: detecta enemigos a larga distancia.
+⚔️ Golpe Mecánico: ataca con gran fuerza.
+🔋 Modo Defensa: endurece su armadura temporalmente</p>
+                            <span>(Click para cerrar)</span>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <!-- Personaje 3 -->
+        <div class="tarjeta-wrapper">
+            <input type="checkbox" id="modal-3" class="modal-state">
+            <label for="modal-3" class="personaje-card">
+                <div class="info-mini">
+                    <h3>ZIP</h3>
+                    <p>Una criatura espiritual nacida bajo el primer sol del desierto. Su presencia ilumina la oscuridad y guía a los viajeros perdidos.</p>
+                </div>
+                <div class="img-mini"><img src="imagenes/Diseño sin título (6).png" alt="P3"></div>
+            </label>
+            <div class="modal-overlay">
+                <label for="modal-3" class="modal-content">
+                    <div class="modal-grid">
+                        <img src="imagenes/Diseño sin título (6).png" alt="P3">
+                        <div class="modal-text">
+                            <h3>zip</h3>
+                            <p>Habilidades:
+
+✨ Brillo Sagrado: ilumina zonas ocultas y revela secretos.
+⚡ Salto Celestial: realiza grandes saltos para evitar peligros.
+🌙 Llamado de Luciérnagas: invoca pequeñas luces que curan lentamente.</p>
+                            <span>(Click para cerrar)</span>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <!-- Personaje 4 -->
+        <div class="tarjeta-wrapper">
+            <input type="checkbox" id="modal-4" class="modal-state">
+            <label for="modal-4" class="personaje-card">
+                <div class="info-mini">
+                    <h3>DESIERTO</h3>
+                    <p>Un enorme territorio lleno de dunas, cactus y ruinas antiguas enterradas bajo la arena. Durante el día el calor es extremo, y por la noche aparecen criaturas misteriosas.</p>
+                </div>
+                <div class="img-mini"><img src="imagenes/Diseño sin título (7).png" alt="P4"></div>
+            </label>
+            <div class="modal-overlay">
+                <label for="modal-4" class="modal-content">
+                    <div class="modal-grid">
+                        <img src="imagenes/Diseño sin título (7).png" alt="P4">
+                        <div class="modal-text">
+                            <h3>Desierto</h3>
+                            <p>Características y habilidades del entorno:
+
+🌵 Tormentas de Arena: reducen la visibilidad.
+☀️ Calor Intenso: agota lentamente a los enemigos.
+🗿 Ruinas Ocultas: esconden tesoros y poderes ancestrales.
+🌌 Noches Espirituales: aparecen caminos secretos bajo la luz de la luna.</p>
+                            <span>(Click para cerrar)</span>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+<footer class="pixel-footer">
+    <div class="footer-container">
+        <!-- Columna 1: Contacto -->
+        <div class="footer-section">
+            <h4 class="footer-title title-rojo">CONTACTO</h4>
+            <p class="pixel-text">Email: hello@pixelworld.com</p>
+            <p class="pixel-text">Tel: +123 8-BIT-LINE</p>
+            <p class="pixel-text">Base: Mundo 1-1, Reino Champiñón</p>
+        </div>
+
+        <!-- Columna 2: Enlaces Rápidos -->
+        <div class="footer-section">
+            <h4 class="footer-title title-verde">NAVEGACIÓN</h4>
+            <ul class="footer-links">
+                <li><a href="#inicio">INICIO</a></li>
+                <li><a href="#descripcion">DESCRIPCIÓN</a></li>
+                <li><a href="#personajes">PERSONAJES</a></li>
+            </ul>
+        </div>
+
+        <!-- Columna 3: Redes Sociales -->
+        <div class="footer-section">
+            <h4 class="footer-title title-cafe">REDES</h4>
+            <div class="social-icons">
+                <a href="#" class="social-box">FB</a>
+                <a href="#" class="social-box">TW</a>
+                <a href="#" class="social-box">IG</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Barra Inferior de Copyright -->
+    <div class="footer-bottom">
+        <p>&copy; Valentina Isabella Amadeo Romero - Instituto de CompuIngles de Oriente</p>
+    </div>
+</footer>
+</html>
